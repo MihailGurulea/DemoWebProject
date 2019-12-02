@@ -12,6 +12,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+
 	@NotBlank(message = "Name is mandatory")
 	private String name;
 	
@@ -48,10 +49,5 @@ public class User {
 	
 	public String getEmail() {
 		return email;
-	}
-	
-	@Override
-	public String toString() {
-		return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
 	}
 }
